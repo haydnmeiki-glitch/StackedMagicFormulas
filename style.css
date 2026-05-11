@@ -6,41 +6,18 @@ body {
 
 .filters {
   display: flex;
-  gap: 10px;
+  gap: 15px;
   margin: 20px;
+  padding: 15px;
+  background: rgba(0,0,0,0.6);
+  border-radius: 12px;
+  width: fit-content;
 }
 
 select,
 input {
-  padding: 10px;
-  font-size: 16px;
-}
-
-.post {
-  margin: 20px;
-  padding: 20px;
-  border: 1px solid white;
-}
-body {
-  background: black;
-  color: white;
-  font-family: Arial;
-}
-
-.filters {
-  display: flex;
-  gap: 10px;
-  margin: 20px;
-}
-
-select,
-input {
-  padding: 10px;
-  font-size: 16px;
-}
-
-.post {
-  margin: 20px;
-  padding: 20px;
-  border: 1px solid white;
+  padding: 10px 14px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
 }
