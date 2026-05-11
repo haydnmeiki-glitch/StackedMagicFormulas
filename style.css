@@ -21,3 +21,26 @@ input {
   padding: 20px;
   border: 1px solid white;
 }
+body {
+  background: black;
+  color: white;
+  font-family: Arial;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin: 20px;
+}
+
+select,
+input {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.post {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid white;
+}
