@@ -1,9 +1,13 @@
-console.log("Script connected!");
 const rankFilter = document.getElementById("rankFilter");
 const dateFilter = document.getElementById("dateFilter");
 const typeFilter = document.getElementById("typeFilter");
 
 const posts = document.querySelectorAll(".post");
+
+// Hide everything on startup
+posts.forEach(post => {
+  post.style.display = "none";
+});
 
 function filterPosts() {
 
@@ -18,13 +22,13 @@ function filterPosts() {
     const type = post.dataset.type;
 
     const rankMatch =
-      !selectedRank || rank === selectedRank;
+      selectedRank && rank === selectedRank;
 
     const dateMatch =
-      !selectedDate || date === selectedDate;
+      selectedDate && date === selectedDate;
 
     const typeMatch =
-      !selectedType || type === selectedType;
+      selectedType && type === selectedType;
 
     if (rankMatch && dateMatch && typeMatch) {
       post.style.display = "block";
@@ -38,4 +42,5 @@ function filterPosts() {
 
 rankFilter.addEventListener("change", filterPosts);
 dateFilter.addEventListener("change", filterPosts);
+typeFilter.addEventListener("change", filterPosts);
 typeFilter.addEventListener("change", filterPosts);
