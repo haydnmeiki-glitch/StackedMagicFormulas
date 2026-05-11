@@ -36,6 +36,31 @@ h1, h2 {
 </head>
 
 <body>
+<div class="filters">
+
+  <!-- Rank Filter -->
+  <select id="rankFilter">
+    <option value="">All Ranks</option>
+    <option value="S">S Rank</option>
+    <option value="A">A Rank</option>
+    <option value="B">B Rank</option>
+    <option value="C">C Rank</option>
+    <option value="D">D Rank</option>
+    <option value="F">F Rank</option>
+  </select>
+
+  <!-- Date Filter -->
+  <input type="date" id="dateFilter">
+
+  <!-- Type Filter -->
+  <select id="typeFilter">
+    <option value="">All Types</option>
+    <option value="text">Text</option>
+    <option value="image">Image</option>
+    <option value="video">Video</option>
+  </select>
+
+</div>
 
 <video autoplay muted loop>
   <source src="background.mp4" type="video/mp4">
