@@ -25,3 +25,19 @@ video {
   outline: none;
   display: block;
 }
+#contentContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.post {
+  width: 250px;
+}
+
+.post video,
+.post img {
+  width: 100%;
+  border-radius: 12px;
+}
