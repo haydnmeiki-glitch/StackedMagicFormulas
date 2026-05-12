@@ -44,3 +44,19 @@ rankFilter.addEventListener("change", filterPosts);
 dateFilter.addEventListener("change", filterPosts);
 typeFilter.addEventListener("change", filterPosts);
 typeFilter.addEventListener("change", filterPosts);
+const openLore =
+  document.getElementById("openLore");
+
+const loreWindow =
+  document.getElementById("loreWindow");
+
+const closeLore =
+  document.getElementById("closeLore");
+
+openLore.onclick = () => {
+  loreWindow.style.display = "flex";
+};
+
+closeLore.onclick = () => {
+  loreWindow.style.display = "none";
+};
