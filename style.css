@@ -36,9 +36,15 @@ video {
 }
 
 .post video,
-.post img {
+.post img,
+.post audio {
   width: 100%;
   border-radius: 12px;
+}
+
+audio {
+  display: block;
+  margin-top: 10px;
 }
 #openLore {
   width: auto;
