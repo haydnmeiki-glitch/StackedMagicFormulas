@@ -64,13 +64,11 @@ video {
 }
 
 .loreContent {
-  background: rgba(20,20,20,0.85);
+  background: transparent;
 
   color: white;
 
   padding: 40px;
-
-  border-radius: 16px;
 
   width: 60%;
   max-width: 700px;
