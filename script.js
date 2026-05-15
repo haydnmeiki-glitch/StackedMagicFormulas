@@ -22,13 +22,13 @@ function filterPosts() {
     const type = post.dataset.type;
 
     const rankMatch =
-      selectedRank && rank === selectedRank;
+  !selectedRank || rank === selectedRank;
 
-    const dateMatch =
-      selectedDate && date === selectedDate;
+const dateMatch =
+  !selectedDate || date === selectedDate;
 
-    const typeMatch =
-      selectedType && type === selectedType;
+const typeMatch =
+  !selectedType || type === selectedType;
 
     if (rankMatch && dateMatch && typeMatch) {
       post.style.display = "block";
