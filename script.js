@@ -28,7 +28,7 @@ function filterPosts() {
       selectedDate && date === selectedDate;
 
     const typeMatch =
-      selectedType && type === selectedType;
+      !selectedType || type === selectedType
 
     if (rankMatch && dateMatch && typeMatch) {
       post.style.display = "block";
