@@ -101,3 +101,14 @@ overflow-y: auto;
 .text-content {
   line-height: 1.6;
 }
+.loreLink{
+  color:white;
+  cursor:pointer;
+  transition:0.2s;
+  padding:8px 0;
+}
+
+.loreLink:hover{
+  color:#9fd4ff;
+  transform:translateX(5px);
+}
