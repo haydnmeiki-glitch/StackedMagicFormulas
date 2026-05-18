@@ -88,3 +88,28 @@ loreLinks.forEach(link => {
   });
 
 });
+const sparkleCursor =
+  document.getElementById("sparkleCursor");
+
+document.querySelectorAll(".loreLink")
+.forEach(link => {
+
+  link.addEventListener("mouseenter", () => {
+    sparkleCursor.style.display = "block";
+  });
+
+  link.addEventListener("mouseleave", () => {
+    sparkleCursor.style.display = "none";
+  });
+
+  link.addEventListener("mousemove", (e) => {
+
+    sparkleCursor.style.left =
+      e.clientX + "px";
+
+    sparkleCursor.style.top =
+      e.clientY + "px";
+
+  });
+
+});
