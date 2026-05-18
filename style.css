@@ -101,18 +101,12 @@ overflow-y: auto;
 .text-content {
   line-height: 1.6;
 }
-.loreLink::before{
-  content:"➜ ";
-  color:#9fd4ff;
-  transition:0.2s;
-}
 .loreLink{
-  cursor:pointer;
+  cursor:none;
   transition:0.2s;
 }
 
 .loreLink:hover{
-  cursor:pointer;
 
   color:#9fd4ff;
 
