@@ -110,5 +110,11 @@ overflow-y: auto;
 
 .loreLink:hover{
   color:#9fd4ff;
+
+  text-shadow:
+    0 0 5px #9fd4ff,
+    0 0 10px #9fd4ff,
+    0 0 20px #9fd4ff;
+
   transform:translateX(5px);
 }
