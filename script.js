@@ -60,3 +60,31 @@ openLore.onclick = () => {
 closeLore.onclick = () => {
   loreWindow.style.display = "none";
 };
+const loreLinks =
+  document.querySelectorAll(".loreLink");
+
+loreLinks.forEach(link => {
+
+  link.addEventListener("click", () => {
+
+    rankFilter.value =
+      link.dataset.rank;
+
+    dateFilter.value =
+      link.dataset.date;
+
+    typeFilter.value =
+      link.dataset.type;
+
+    filterPosts();
+
+    loreWindow.style.display = "none";
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
+  });
+
+});
