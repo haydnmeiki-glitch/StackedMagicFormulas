@@ -90,14 +90,21 @@ loreLinks.forEach(link => {
 });
 const sparkleCursor = document.getElementById("sparkleCursor");
 
-document.addEventListener("mousemove", function (e) {
-  const loreLink = e.target.closest(".loreLink");
+document.addEventListener("pointermove", function(e) {
 
-  if (loreLink) {
+  const link = e.target.closest(".loreLink");
+
+  if (link) {
+
     sparkleCursor.style.display = "block";
+
     sparkleCursor.style.left = e.clientX + "px";
     sparkleCursor.style.top = e.clientY + "px";
+
   } else {
+
     sparkleCursor.style.display = "none";
+
   }
+
 });
