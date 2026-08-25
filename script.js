@@ -111,44 +111,32 @@ document.querySelectorAll(".loreLink")
       e.clientY + "px";
 
   });
-
-});
-// CLICK OUTSIDE CONTENT = RETURN TO HOMEPAGE
+// CLICK EMPTY AREA = RETURN TO HOMEPAGE
 document.addEventListener("click", function (event) {
 
-  // Did they click on a post?
-  const clickedPost = event.target.closest(".post");
-
-  // Did they click the Time Measure/filter area?
-  const clickedTimeMeasure = event.target.closest(".filters");
-
-  // Did they click inside the Time Measure popup/window?
-  const clickedLoreWindow =
-    loreWindow && loreWindow.contains(event.target);
-
-  // Did they click one of the Time Measure links?
-  const clickedLoreLink = event.target.closest(".loreLink");
-
-
-  // If they clicked any actual content, do nothing
+  // Don't close if clicking the actual displayed content
   if (
-    clickedPost ||
-    clickedTimeMeasure ||
-    clickedLoreWindow ||
-    clickedLoreLink
+    event.target.closest(".text-content") ||
+    event.target.closest("video") ||
+    event.target.closest("audio") ||
+    event.target.closest("img") ||
+    event.target.closest(".loreLink") ||
+    event.target.closest(".filters") ||
+    (loreWindow && loreWindow.contains(event.target))
   ) {
     return;
   }
 
-
-  // Otherwise, they clicked away from the content.
-  // Reset everything back to homepage.
+  // Reset hidden filters
   rankFilter.value = "";
   dateFilter.value = "";
   typeFilter.value = "";
 
+  // Return to normal homepage
   filterPosts();
 
-  // Close Time Measure window
-  loreWindow.style.display = "none";
+  // Close Time Measure menu
+  if (loreWindow) {
+    loreWindow.style.display = "none";
+  }
 });
