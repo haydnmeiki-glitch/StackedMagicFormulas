@@ -88,28 +88,3 @@ loreLinks.forEach(link => {
   });
 
 });
-document.addEventListener("DOMContentLoaded", function () {
-
-  const sparkleCursor = document.getElementById("sparkleCursor");
-
-  if (!sparkleCursor) {
-    console.log("sparkleCursor was not found");
-    return;
-  }
-
-  document.addEventListener("mousemove", function (e) {
-
-    sparkleCursor.style.left = e.clientX + "px";
-    sparkleCursor.style.top = e.clientY + "px";
-
-    const loreLink = e.target.closest(".loreLink");
-
-    if (loreLink) {
-      sparkleCursor.style.display = "block";
-    } else {
-      sparkleCursor.style.display = "none";
-    }
-
-  });
-
-});
