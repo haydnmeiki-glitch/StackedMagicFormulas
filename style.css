@@ -3,11 +3,17 @@ body {
   color: white;
   font-family: Arial;
 }
-
 .filters {
   display: flex;
   gap: 10px;
   margin: 20px;
+}
+
+/* Hide filters controlled by Time Measure */
+#rankFilter,
+#dateFilter,
+#typeFilter {
+  display: none;
 }
 
 select,
