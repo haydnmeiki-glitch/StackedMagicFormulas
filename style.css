@@ -3,13 +3,26 @@ body {
   color: white;
   font-family: Arial;
 }
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+
+/* FILTER AREA */
+
 .filters {
   display: flex;
   gap: 10px;
   margin: 20px;
 }
 
-/* Hide filters controlled by Time Measure */
+
+/* Hidden filters controlled by Time Measure */
+
 #rankFilter,
 #dateFilter,
 #typeFilter {
@@ -22,6 +35,9 @@ input {
   font-size: 16px;
 }
 
+
+/* POSTS */
+
 #contentContainer {
   display: flex;
   flex-wrap: wrap;
@@ -33,7 +49,13 @@ input {
   width: 250px;
   margin: 10px;
   padding: 10px;
+
+  /* Hide all posts until Time Measure selects one */
+  display: none;
 }
+
+
+/* VIDEO / IMAGE */
 
 video {
   border: none;
@@ -46,10 +68,17 @@ video {
   width: 100%;
   border-radius: 12px;
 }
+
+
+/* TIME MEASURE BUTTON */
+
 #openLore {
   width: auto;
   padding: 10px 14px;
 }
+
+
+/* TIME MEASURE WINDOW */
 
 #loreWindow {
   display: none;
@@ -71,7 +100,6 @@ video {
 
 .loreContent {
   background: transparent;
-
   color: white;
 
   padding: 40px;
@@ -80,11 +108,10 @@ video {
   max-width: 700px;
 
   text-align: center;
-
   font-size: 20px;
 
   max-height: 80vh;
-overflow-y: auto;
+  overflow-y: auto;
 }
 
 #closeLore {
@@ -92,10 +119,16 @@ overflow-y: auto;
   font-size: 32px;
   cursor: pointer;
 }
+
+
+/* TEXT POSTS */
+
 .text-post {
   background: transparent;
   color: white;
+
   padding: 20px;
+
   max-width: 700px;
   margin: 20px auto;
 }
@@ -107,11 +140,12 @@ overflow-y: auto;
 .text-content {
   line-height: 1.6;
 }
-.loreLink {
-  cursor: pointer;
-}
+
+
+/* TIME MEASURE LINKS */
 
 .loreLink {
+  cursor: pointer;
   transition: 0.2s;
 }
 
@@ -124,14 +158,18 @@ overflow-y: auto;
     0 0 20px #9fd4ff;
 }
 
+
+/* GLOWING CURSOR */
+
 #sparkleCursor {
   width: 20px;
   height: 20px;
-  border-radius: 50%;
 
   position: fixed;
   left: 0;
   top: 0;
+
+  border-radius: 50%;
 
   pointer-events: none;
 
@@ -149,6 +187,10 @@ overflow-y: auto;
 
   display: none;
 }
+
+
+/* BACKGROUND VIDEO */
+
 #bg-video {
   position: fixed;
   top: 0;
@@ -160,10 +202,4 @@ overflow-y: auto;
   object-fit: cover;
 
   z-index: -1;
-}
-html,
-body {
-  margin: 0;
-  padding: 0;
-  min-height: 100%;
 }
