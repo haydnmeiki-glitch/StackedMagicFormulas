@@ -1479,7 +1479,18 @@ Mesh was changed to clear by Haydn
     
   
 
-<div id="sparkleCursor"></div>        
-<script src="script.js?v=2"></script>
+<div id="sparkleCursor"></div>
+
+<script>
+const testCursor = document.getElementById("sparkleCursor");
+
+document.addEventListener("mousemove", function(e) {
+  testCursor.style.display = "block";
+  testCursor.style.left = e.clientX + "px";
+  testCursor.style.top = e.clientY + "px";
+});
+</script>
+
+<script src="script.js?v=3"></script>
 </body>
 </html>
