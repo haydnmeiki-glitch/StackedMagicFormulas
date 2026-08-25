@@ -108,7 +108,7 @@ overflow-y: auto;
   line-height: 1.6;
 }
 .loreLink{
-  cursor:none;
+  cursor:pointer;
   transition:0.2s;
 }
 
