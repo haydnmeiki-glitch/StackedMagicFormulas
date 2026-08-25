@@ -88,28 +88,16 @@ loreLinks.forEach(link => {
   });
 
 });
-const sparkleCursor =
-  document.getElementById("sparkleCursor");
+const sparkleCursor = document.getElementById("sparkleCursor");
 
-document.querySelectorAll(".loreLink")
-.forEach(link => {
+document.addEventListener("mousemove", function (e) {
+  const loreLink = e.target.closest(".loreLink");
 
-  link.addEventListener("mouseenter", () => {
+  if (loreLink) {
     sparkleCursor.style.display = "block";
-  });
-
-  link.addEventListener("mouseleave", () => {
+    sparkleCursor.style.left = e.clientX + "px";
+    sparkleCursor.style.top = e.clientY + "px";
+  } else {
     sparkleCursor.style.display = "none";
-  });
-
-  link.addEventListener("mousemove", (e) => {
-
-    sparkleCursor.style.left =
-      e.clientX + "px";
-
-    sparkleCursor.style.top =
-      e.clientY + "px";
-
-  });
-
+  }
 });
