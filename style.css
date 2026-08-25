@@ -107,30 +107,36 @@ overflow-y: auto;
 .text-content {
   line-height: 1.6;
 }
-.loreLink{
-  cursor:pointer;
-  transition:0.2s;
+.loreLink,
+.loreLink * {
+  cursor: none !important;
 }
 
-.loreLink:hover{
+.loreLink {
+  transition: 0.2s;
+}
 
-  color:#9fd4ff;
+.loreLink:hover {
+  color: #9fd4ff;
 
   text-shadow:
     0 0 5px #9fd4ff,
     0 0 10px #9fd4ff,
     0 0 20px #9fd4ff;
 }
-#sparkleCursor{
-  width:20px;
-  height:20px;
 
-  border-radius:50%;
+#sparkleCursor {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
 
-  position:fixed;
-  pointer-events:none;
+  position: fixed;
+  left: 0;
+  top: 0;
 
-  background:white;
+  pointer-events: none;
+
+  background: white;
 
   box-shadow:
     0 0 5px white,
@@ -138,11 +144,11 @@ overflow-y: auto;
     0 0 20px #9fd4ff,
     0 0 40px #9fd4ff;
 
-  transform:translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 
-  z-index:9999;
+  z-index: 999999;
 
-  display:none;
+  display: none;
 }
 #bg-video {
   position: fixed;
