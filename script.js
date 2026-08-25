@@ -88,23 +88,31 @@ loreLinks.forEach(link => {
   });
 
 });
-const sparkleCursor = document.getElementById("sparkleCursor");
+function initSparkleCursor() {
 
-document.addEventListener("pointermove", function(e) {
+  const sparkleCursor = document.getElementById("sparkleCursor");
 
-  const link = e.target.closest(".loreLink");
+  if (!sparkleCursor) return;
 
-  if (link) {
+  document.body.classList.add("sparkle-ready");
 
-    sparkleCursor.style.display = "block";
+  document.addEventListener("mousemove", function(e) {
 
-    sparkleCursor.style.left = e.clientX + "px";
-    sparkleCursor.style.top = e.clientY + "px";
+    const link = e.target.closest?.(".loreLink");
 
-  } else {
+    if (link) {
+      sparkleCursor.style.display = "block";
+      sparkleCursor.style.left = e.clientX + "px";
+      sparkleCursor.style.top = e.clientY + "px";
+    } else {
+      sparkleCursor.style.display = "none";
+    }
 
-    sparkleCursor.style.display = "none";
+  });
+}
 
-  }
-
-});
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initSparkleCursor);
+} else {
+  initSparkleCursor();
+}
