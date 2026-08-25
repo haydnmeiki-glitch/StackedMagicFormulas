@@ -111,32 +111,3 @@ document.querySelectorAll(".loreLink")
       e.clientY + "px";
 
   });
-// CLICK EMPTY AREA = RETURN TO HOMEPAGE
-document.addEventListener("click", function (event) {
-
-  // Don't close if clicking the actual displayed content
-  if (
-    event.target.closest(".text-content") ||
-    event.target.closest("video") ||
-    event.target.closest("audio") ||
-    event.target.closest("img") ||
-    event.target.closest(".loreLink") ||
-    event.target.closest(".filters") ||
-    (loreWindow && loreWindow.contains(event.target))
-  ) {
-    return;
-  }
-
-  // Reset hidden filters
-  rankFilter.value = "";
-  dateFilter.value = "";
-  typeFilter.value = "";
-
-  // Return to normal homepage
-  filterPosts();
-
-  // Close Time Measure menu
-  if (loreWindow) {
-    loreWindow.style.display = "none";
-  }
-});
