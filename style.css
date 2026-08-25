@@ -110,10 +110,6 @@ overflow-y: auto;
 .loreLink {
   cursor: pointer;
 }
-.sparkle-ready .loreLink,
-.sparkle-ready .loreLink * {
-  cursor: pointer;
-}
 
 .loreLink {
   transition: 0.2s;
