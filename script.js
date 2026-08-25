@@ -113,3 +113,42 @@ document.querySelectorAll(".loreLink")
   });
 
 });
+// CLICK OUTSIDE CONTENT = RETURN TO HOMEPAGE
+document.addEventListener("click", function (event) {
+
+  // Did they click on a post?
+  const clickedPost = event.target.closest(".post");
+
+  // Did they click the Time Measure/filter area?
+  const clickedTimeMeasure = event.target.closest(".filters");
+
+  // Did they click inside the Time Measure popup/window?
+  const clickedLoreWindow =
+    loreWindow && loreWindow.contains(event.target);
+
+  // Did they click one of the Time Measure links?
+  const clickedLoreLink = event.target.closest(".loreLink");
+
+
+  // If they clicked any actual content, do nothing
+  if (
+    clickedPost ||
+    clickedTimeMeasure ||
+    clickedLoreWindow ||
+    clickedLoreLink
+  ) {
+    return;
+  }
+
+
+  // Otherwise, they clicked away from the content.
+  // Reset everything back to homepage.
+  rankFilter.value = "";
+  dateFilter.value = "";
+  typeFilter.value = "";
+
+  filterPosts();
+
+  // Close Time Measure window
+  loreWindow.style.display = "none";
+});
