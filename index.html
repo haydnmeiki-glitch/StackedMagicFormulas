@@ -1481,5 +1481,21 @@ Mesh was changed to clear by Haydn
 <div id="sparkleCursor"></div>
 
 <script src="script.js?v=3"></script>
+
+<script>
+const sparkle = document.getElementById("sparkleCursor");
+
+document.addEventListener("mousemove", function(event) {
+  sparkle.style.left = event.clientX + "px";
+  sparkle.style.top = event.clientY + "px";
+
+  if (event.target.closest(".loreLink")) {
+    sparkle.style.display = "block";
+  } else {
+    sparkle.style.display = "none";
+  }
+});
+</script>
+
 </body>
 </html>
