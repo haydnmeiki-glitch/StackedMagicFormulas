@@ -203,3 +203,6 @@ video {
 
   z-index: -1;
 }
+a[href*="spotify.com"] {
+  color: white !important;
+}
