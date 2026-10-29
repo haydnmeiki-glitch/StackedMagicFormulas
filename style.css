@@ -203,3 +203,11 @@ video {
 
   z-index: -1;
 }
+.post a[href*="spotify"],
+.text-post a[href*="spotify"],
+.loreLink a[href*="spotify"],
+a[href*="spotify"] {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    text-decoration-color: #ffffff !important;
+}
